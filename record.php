@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch data from the database
-if(isset($_POST["record"]))
+if(isset($_POST['record'])) {
 $sql = "SELECT * FROM student_entry";
 $result = $conn->query($sql);
 
@@ -30,9 +30,30 @@ while($row = $result->fetch_assoc()) {
 }
 $html .= "</table>";
 
+echo "<style>
+table {
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #3399FF;
+  color: white;
+}
+</style>";
+
 // Display HTML output
 echo $html;
-
+}
 // Close connection
 $conn->close();
 ?>

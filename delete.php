@@ -30,17 +30,37 @@ $result = $conn->query($sql);
 
 // Generate HTML output
 $html = "<table>";
-$html .= "<tr><th>Name</th><th>Roll Number</th><th>Gender</th><th>Year</th><th>Action</th></tr>";
+$html .= "<tr><th>Name</th><th>Roll Number</th><th>Gender</th><th>Year</th></tr>";
 while($row = $result->fetch_assoc()) {
   $html .= "<tr>";
   $html .= "<td>" . $row["Name"] . "</td>";
   $html .= "<td>" . $row["Id"] . "</td>";
   $html .= "<td>" . $row["Gender"] . "</td>";
   $html .= "<td>" . $row["Current_Year"] . "</td>";
-  $html .= "<td><a href='?delete=" . $row["Id"] . "'>Delete</a></td>";
   $html .= "</tr>";
 }
 $html .= "</table>";
+
+echo "<style>
+table {
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #3399FF;
+  color: white;
+}
+</style>";
 
 // Display HTML output
 echo $html;
