@@ -1,0 +1,9 @@
+.container-fluid{
+    background-color:aqua;
+    margin:0%;
+    width:100%;
+    height:130%;
+}
+body{
+    background-color: black;
+}
