@@ -8,7 +8,8 @@ body{
     background-color: black;
 }
 .Intro{
-    margin:3%;
+    margin:5%;
     display:flex;
+    color:white;
 
 }

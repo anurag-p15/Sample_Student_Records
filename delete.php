@@ -16,15 +16,26 @@ if ($conn->connect_error) {
 if(isset($_POST["delete"])) {
     $fn = $_POST["fname"];
     $ln = $_POST["lname"];
-    $stmt=$conn->prepare("DELETE FROM student_entry WHERE First_Name=? and Last_Name=?");
-    $stmt->bind_param("ss",$fn,$ln);
+    $r = $_POST["roll"];
+    $stmt=$conn->prepare("DELETE FROM student_entry WHERE (First_Name=? and Last_Name=?) and Id=?");
+    $stmt->bind_param("sss",$fn,$ln,$r);
     if ($stmt->execute() === TRUE) {
-        echo "Record deleted successfully";
+      echo "<script>alert('Record deleted successfully')</script>";
     } else {
         echo "Error deleting record: " . $conn->error;
     }
 }
-
+if(isset($_POST["delete1"])) {
+  $d=$_POST["degree"];
+  $y=$_POST["year"];
+  $stmt=$conn->prepare("DELETE FROM student_entry WHERE Degree=? and Current_Year=?");
+  $stmt->bind_param("ss",$d,$y);
+  if ($stmt->execute() === TRUE) {
+    echo "<script>alert('Record deleted successfully')</script>";
+  } else {
+      echo "Error deleting record: " . $conn->error;
+  }
+}
 // Fetch data from the database
 $sql = "SELECT * FROM student_entry";
 $result = $conn->query($sql);
