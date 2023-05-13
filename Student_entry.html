@@ -18,25 +18,28 @@
             </div>
         </div>
     </div>
+    <div class="Intro">
+        
+    </div>
         <div class="authentication">
          <form action="./write.php" method="POST">
             <div class="row"style="margin-left:1%">
                 <h3>Register</h3>
                     <div class="col-sm-6">
                         <span>Enter first name of Student</span><br>
-                        <input type="text" name="fname" id="fname"placeholder="Enter Name" value = ""required>
+                        <input class="form-control" class="form-control"type="text" name="fname" id="fname"placeholder="Enter Name" value = ""required>
                     </div>
             </div>  
             <div class="row"style="margin-left:1%">
                 <div class="col-sm-6">
                     <span>Enter last name of Student</span><br>
-                    <input type="text" name="lname" id="lname"placeholder="Enter Name" value = ""required>
+                    <input class="form-control" type="text" name="lname" id="lname"placeholder="Enter Name" value = ""required>
                 </div>
                 </div>
                 <div class="row"style="margin-left:1%">
                     <div class="col-sm-6">
                         <span>Enter Field of Study</span><br>
-                        <select name="field" id="field" required>
+                        <select class="form-control" name="field" id="field" required>
                             <option>---</option>
                             <option>Science</option>
                             <option>Commerce</option>
@@ -48,7 +51,7 @@
         <div class="row"style="margin-left:1%">
             <div class="col-sm-6">
                 <span>Enter degree of Student</span><br>
-                <select name="degree" id="degree" required>
+                <select class="form-control"name="degree" id="degree" required>
                     <option>---</option>
                     <option>B.Tech</option>
                     <option>B.Sc</option>
@@ -77,13 +80,13 @@
             <div class="row"style="margin-left:1%">
                 <div class="col-sm-6">
                     <span>Enter Roll Number</span><br>
-                    <input type="number" name="roll" id="roll"placeholder="Enter roll number" value = "" required>
+                    <input class="form-control"type="number" name="roll" id="roll"placeholder="Enter roll number" value = "" required>
                 </div>
             </div>  
             <div class="row"style="margin-left:1%">
                 <div class="col-sm-6">
                     <span>Enter Year of Student</span><br>
-                    <select name="year" id="year" required>
+                    <select class="form-control"name="year" id="year" required>
                         <option>---</option>
                         <option>FY</option>
                         <option>SY</option>
@@ -95,7 +98,7 @@
                 <div class="row"style="margin-left:1%">
                     <div class="col-sm-6">
                         <span>Gender</span><br>
-                        <select name="gender" id="gender" required>
+                        <select class="form-control"name="gender" id="gender" required>
                             <option>---</option>
                             <option>Male</option>
                             <option>Female</option>
@@ -123,11 +126,12 @@
             <h5>Delete Student</h5>
             <p>Delete a indivdual student</p>
             <p>Enter Student's First Name</p>
-            <input type="text" placeholder="Enter student's first name" name="fname" id="fname" required><br><br>
+            <input class="form-control" type="text" placeholder="Enter student's first name" name="fname" id="fname" required><br>
             <p>Enter Student's Last Name</p>
-            <input type="text" placeholder="Enter student's last name" name="lname" id="lname" required><br>
+            <div>
+            <input type="text" class="form-control" placeholder="Enter student's last name" name="lname" id="lname" required><br>
             <p>Enter Student's Roll Number</p>
-            <input type="text" placeholder="Enter roll number" name="roll" id="roll" required><br>
+            <input type="text"class="form-control"  placeholder="Enter roll number" name="roll" id="roll" required><br>
             <input class="btn btn-warning" name="delete" type="submit" style="margin-bottom:5%;margin-top:5%">
             </form>
             <form action="./delete.php" method="post">
@@ -135,7 +139,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <span>Enter Year of Student</span><br>
-                    <select name="year" id="year" required>
+                    <select class="form-control"name="year" id="year" required>
                         <option>---</option>
                         <option>FY</option>
                         <option>SY</option>
@@ -147,7 +151,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <span>Enter degree of Student</span><br>
-                    <select name="degree" id="degree" required>
+                    <select class="form-control"name="degree" id="degree" required>
                         <option>---</option>
                         <option>B.Tech</option>
                         <option>B.Sc</option>
