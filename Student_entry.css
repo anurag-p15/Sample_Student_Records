@@ -14,3 +14,12 @@ body{
     float:left;
     margin:5%;
 }
+.operation{
+    background-color: rgb(41, 10, 222);
+    width:30%;
+    height:max-content;
+    float:right;
+    margin:5%;
+    padding-left:3%;
+    color:white;
+}

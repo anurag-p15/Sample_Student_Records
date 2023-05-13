@@ -19,10 +19,13 @@ $result = $conn->query($sql);
 
 // Generate HTML output
 $html = "<table>";
-$html .= "<tr><th>Name</th><th>Roll Number</th><th>Gender</th><th>Year</th></tr>";
+$html .= "<tr><th>First Name</th><th>Last Name<th>Field</th><th>Degree</th><th>Roll Number</th><th>Gender</th><th>Year</th></tr>";
 while($row = $result->fetch_assoc()) {
   $html .= "<tr>";
-  $html .= "<td>" . $row["Name"] . "</td>";
+  $html .= "<td>" . $row["First_Name"] . "</td>";
+  $html .= "<td>" . $row["Last_Name"] . "</td>";
+  $html .= "<td>" . $row["Field"] . "</td>";
+  $html .= "<td>" . $row["Degree"] . "</td>";
   $html .= "<td>" . $row["Id"] . "</td>";
   $html .= "<td>" . $row["Gender"] . "</td>";
   $html .= "<td>" . $row["Current_Year"] . "</td>";

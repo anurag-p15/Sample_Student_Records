@@ -14,9 +14,10 @@ if ($conn->connect_error) {
 
 // Delete a record from the database
 if(isset($_POST["delete"])) {
-    $name = $_POST["stud_name"];
-    $stmt=$conn->prepare("DELETE FROM student_entry WHERE Name=?");
-    $stmt->bind_param("s",$name);
+    $fn = $_POST["fname"];
+    $ln = $_POST["lname"];
+    $stmt=$conn->prepare("DELETE FROM student_entry WHERE First_Name=? and Last_Name=?");
+    $stmt->bind_param("ss",$fn,$ln);
     if ($stmt->execute() === TRUE) {
         echo "Record deleted successfully";
     } else {
@@ -30,10 +31,13 @@ $result = $conn->query($sql);
 
 // Generate HTML output
 $html = "<table>";
-$html .= "<tr><th>Name</th><th>Roll Number</th><th>Gender</th><th>Year</th></tr>";
+$html .= "<tr><th>First Name</th><th>Last Name<th>Field</th><th>Degree</th><th>Roll Number</th><th>Gender</th><th>Year</th></tr>";
 while($row = $result->fetch_assoc()) {
   $html .= "<tr>";
-  $html .= "<td>" . $row["Name"] . "</td>";
+  $html .= "<td>" . $row["First_Name"] . "</td>";
+  $html .= "<td>" . $row["Last_Name"] . "</td>";
+  $html .= "<td>" . $row["Field"] . "</td>";
+  $html .= "<td>" . $row["Degree"] . "</td>";
   $html .= "<td>" . $row["Id"] . "</td>";
   $html .= "<td>" . $row["Gender"] . "</td>";
   $html .= "<td>" . $row["Current_Year"] . "</td>";

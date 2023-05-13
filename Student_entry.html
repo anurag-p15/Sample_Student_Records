@@ -12,29 +12,75 @@
 <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-4"><a href="./Welcome.html" role="button" class="btn btn-primary" style="margin-left:5%">Home</a></div>
+                <div class="col-sm-4"><a href="./Welcome.html" role="button" class="btn btn-primary">Home</a></div>
                 <div class="col-sm-4"><a href="./Contact.html" role="button" class="btn btn-primary">Contact</a></div>
                 <div class="col-sm-4"><a href="./login.html" role="button" class="btn btn-primary">Logout</a></div>
             </div>
         </div>
     </div>
-    <div class="row">
         <div class="authentication">
                     <h3>Register</h3>
          <form action="./write.php" method="POST">
-            <div class="row">
+            <div class="row"style="margin-left:1%">
                     <div class="col-sm-6">
-                        <span>Enter name of Student</span><br>
-                        <input type="text" name="name" id="name"placeholder="Enter Name" value = ""required>
+                        <span>Enter first name of Student</span><br>
+                        <input type="text" name="fname" id="fname"placeholder="Enter Name" value = ""required>
                     </div>
             </div>  
-            <div class="row">
+            <div class="row"style="margin-left:1%">
+                <div class="col-sm-6">
+                    <span>Enter last name of Student</span><br>
+                    <input type="text" name="lname" id="lname"placeholder="Enter Name" value = ""required>
+                </div>
+                </div>
+                <div class="row"style="margin-left:1%">
+                    <div class="col-sm-6">
+                        <span>Enter Field of Study</span><br>
+                        <select name="field" id="field" required>
+                            <option>---</option>
+                            <option>Science</option>
+                            <option>Commerce</option>
+                            <option>Arts</option>
+                            <option>Diploma</option>
+                        </select>
+                    </div>
+                    </div> 
+        <div class="row"style="margin-left:1%">
+            <div class="col-sm-6">
+                <span>Enter degree of Student</span><br>
+                <select name="degree" id="degree" required>
+                    <option>---</option>
+                    <option>B.Tech</option>
+                    <option>B.Sc</option>
+                    <option>B.Com</option>
+                    <option>BBA</option>
+                    <option>BMS</option>
+                    <option>BAFF</option>
+                    <option>Economics</option>
+                    <option>Finance</option>
+                    <option>Business</option>
+                    <option>Archaeology</option>
+                    <option>Literature</option>
+                    <option>Teaching</option>
+                    <option>MBBS</option>
+                    <option>Hospitality</option>
+                    <option>Orhthopaedic</option>
+                    <option>Dentist</option>
+                    <option>Psychology</option>
+                    <option>Ayurvedic</option>
+                    <option>Phd</option>
+                    <option>M.Sc/M.Tech</option>
+                    <option>MBA</option>
+                </select>
+            </div>
+       </div>  
+            <div class="row"style="margin-left:1%">
                 <div class="col-sm-6">
                     <span>Enter Roll Number</span><br>
                     <input type="number" name="roll" id="roll"placeholder="Enter roll number" value = "" required>
                 </div>
             </div>  
-            <div class="row">
+            <div class="row"style="margin-left:1%">
                 <div class="col-sm-6">
                     <span>Enter Year of Student</span><br>
                     <select name="year" id="year" required>
@@ -45,7 +91,8 @@
                         <option>LY</option>
                     </select>
                 </div>
-                <div class="row">
+                </div>
+                <div class="row"style="margin-left:1%">
                     <div class="col-sm-6">
                         <span>Gender</span><br>
                         <select name="gender" id="gender" required>
@@ -54,27 +101,27 @@
                             <option>Female</option>
                         </select>
                     </div>
-                </div>  
-        </div>       
-        <div class="row">
-            <div class="col-sm-6">
-                <input  class="btn btn-primary" name="write" type="submit"style="margin-bottom:10%;margin-top:10%" >
-            </div>
-        </div> 
+                </div>        
+               <div class="row"style="margin-left:1%">
+                    <div class="col-sm-6">
+                    <input  class="btn btn-primary" name="write" type="submit"style="margin-bottom:10%;margin-top:10%" >
+                    </div>
+                </div> 
         </form>
     </div>
-    <div class="authentication" style="float:right;">
+    <div class="operation">
         <form action="./record.php" method="POST" >
             <h3>Records</h3>
             <div class="col-sm-6">
                 Check Records of Students<br>
-                <input class="btn btn-primary" name="record" type="submit" style="margin-bottom:10%;margin-top:10%">
+                <input class="btn btn-warning" name="record" type="submit" style="margin-bottom:5%;margin-top:5%">
             </div> 
         </form>  
         <form action="./delete.php" method="POST">
             <h5>Delete Student</h5>
-            <input type="text" placeholder="Enter student name" name="stud_name" id="stud_name" required><br>
-            <input class="btn btn-primary" name="delete" type="submit" style="margin-bottom:10%;margin-top:10%">
+            <input type="text" placeholder="Enter student's first name" name="fname" id="fname" required><br><br>
+            <input type="text" placeholder="Enter student's last name" name="lname" id="lname" required><br>
+            <input class="btn btn-warning" name="delete" type="submit" style="margin-bottom:5%;margin-top:5%">
         </form>    
     </div> 
     
