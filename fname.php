@@ -1,20 +1,17 @@
-<<?php
+<?php
 $servername="localhost";
 $password="";
 $dbname="demo1";
 $username="root";
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if($conn->connect_error){
+    die("Error ".$conn->conn_error);
 }
-// Fetch data from the database
-if(isset($_POST['record'])) {
-$sql = "SELECT * FROM student_entry";
-$result = $conn->query($sql);
-// Generate HTML output
-$html = "<table>";
+if(isset($_POST["search"])){
+    $f=$_POST["fname"];
+    $sql = "SELECT * FROM student_entry WHERE First_Name='$f'";
+    $result = $conn->query($sql);
+    $html = "<table>";
 $html .= "<tr><th>First Name</th><th>Last Name<th>Field</th><th>Degree</th><th>Roll Number</th><th>Gender</th><th>Year</th></tr>";
 while($row = $result->fetch_assoc()) {
   $html .= "<tr>";
@@ -29,7 +26,7 @@ while($row = $result->fetch_assoc()) {
 }
 $html .= "</table>";
 
-"<style>
+echo "<style>
 table {
   border-collapse: collapse;
   margin: 20px;

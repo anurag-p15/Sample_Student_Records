@@ -10,18 +10,28 @@ body{
 .authentication{
     background-color: rgb(241, 143, 16);
     width:30%;
-    height:100%;
+    height: 120%;
     float:left;
-    margin:5%;
-    margin-left:10%;
+    margin-left:2%;
+    margin-top:3%;
 }
 .operation{
     background-color: rgb(41, 10, 222);
-    width:33%;
+    width:30%;
     height:max-content;
     float:left;
-    margin:5%;
-    margin-left:10%;
+    margin-top:3%;
+    margin-left:2%;
+    padding-left:3%;
+    color:white;
+}
+.searching{
+    background-color: rgb(14, 205, 11);
+    width:30%;
+    height:max-content;
+    float:left;
+    margin-left:2%;
+    margin-top:3%;
     padding-left:3%;
     color:white;
 }
