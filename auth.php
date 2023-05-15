@@ -41,8 +41,8 @@ else{
         } 
         else{
             $_SESSION['logged_in'] = false;
-            echo "Login failed";
-            header("Location:./login.html");
+            echo "<script>alert('Incorrect credentials!! Please try again')</script>";
+        echo "<script>setTimeout(\"location.href = './login.html';\",1500);</script>";
             exit();
         }
         $stmt->close();
