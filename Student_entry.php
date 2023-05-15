@@ -1,3 +1,14 @@
+<?php
+session_start();
+// Check if user is logged in
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+  // Redirect to login page
+  echo "You are not logged in";
+  header('Location: ./login.html');
+  exit();
+}
+else{
+$content = <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +25,12 @@
             <div class="row">
                 <div class="col-md-4"><a href="./Welcome.html" role="button" class="btn btn-primary">Home</a></div>
                 <div class="col-md-4"><a href="./Contact.html" role="button" class="btn btn-primary">Contact</a></div>
-                <div class="col-md-4"><a href="./login.html" role="button" class="btn btn-primary">Logout</a></div>
+                <div class="col-sm-3">
+                    <form action="./logout.php" method="POST">
+                    
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                </div>  
             </div>
         </div>
     </div>
@@ -288,3 +304,7 @@
     </div> 
 </body>
 </html>
+HTML;
+echo $content;
+}
+?>

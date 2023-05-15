@@ -14,9 +14,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-3"><a href="./Welcome.html" role="button" class="btn btn-primary">Home</a></div>
-                <div class="col-sm-3"><a href="./Contact.html" role="button" class="btn btn-primary">Contact</a></div>
                 <div class="col-sm-3"><a href="./login.html" role="button" class="btn btn-primary">Login</a></div>
-                <div class="col-sm-3"><a href="./login.html" role="button" class="btn btn-primary">Logout</a></div>
+                <div class="col-sm-3">
+                    <form action="./logout.php" method="POST">
+                    
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                </div>  
+                <div class="col-sm-3"><a href="./Student_entry.php" role="button" class="btn btn-primary">Dashboard</a></div>
             </div>
         </div>
     </div>
