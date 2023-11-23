@@ -1,4 +1,7 @@
 # Sample_Php_Student_Records
- A basic repository where a person can register himself/herself and enter add student details such as name,roll number and other academic details
- Each user will have to first register himself/herself specifying name,email and password and login by using the same credentials.
- A session will be created on successfull login where a person can traverse through the dashboard and perform tasks and once he/she clicks logout button the session gets destroyed and he/she has to login again.
+ Created a simple and straightforward website for college student registration records. The platform stores essential student information, 
+              including course, year of study, field of study, and more. Teachers can easily search for students based on these parameters, and have the 
+              option to delete individual or groups of student records. Developed using HTML, CSS, Bootstrap, and PHP for a user-friendly experience. 
+
+Home Page:/
+![Screenshot 2023-11-23 164912](https://github.com/anurag-p15/Sample_Student_Records/assets/108535343/eeb9686e-cdda-4f37-a342-5667982d75a9)
